@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercício 5 TP 3</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<main class="container text-center"> 
+<h1>Apenas os iguais ao último número</h1>
+<script>
+    var vetor = [100];
+    var numero = 0;
+    var contador = 0;
+    var auxiliar = 0;
+    var auxiliar1 = 0;
+    do{
+        vetor[auxiliar1] = parseInt(prompt("Digite um numero:"));
+        if(vetor[auxiliar1] != 0){
+            numero = vetor[auxiliar1];
+            auxiliar1++;
+        }
+        else{
+            auxiliar = 1;
+        }
+    } while (auxiliar == 0);
+    for (var i = 0; i < auxiliar1; i++){
+        if(vetor[i] == numero){
+            contador = contador + 1;
+        }
+    }
+    document.write("Numeros iguais ao ultimo digitado: " + (contador - 1));
+</script>
+</main>
+</body>
+</html>

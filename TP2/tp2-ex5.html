@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercício 5 TP 2</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<main class="container text-center">
+<h1>Fatorial</h1>
+<p>
+    Digite um valor:
+</p>
+<input type="text" name="numero" id="numero">
+<input type="button" value="calcular" onclick="fatorial()">
+<p id="resultado">Resultado:</p>
+  <script>
+  function fatorial() {
+    var numeroEntrada = document.getElementById('numero');
+    var presultado = document.getElementById('resultado');
+    var numero = Number(numeroEntrada.value);
+
+    if(numero < 0) {
+    return 'Valor deve ser maior ou igual a zero';
+      
+    } else if ((numero == 0) || (numero == 1)) {
+    return 1;
+    } else {
+    var acumula = 1;
+    for(x = numero;x > 1; x--) {
+        acumula = acumula * x;
+    }
+    presultado.innerHTML = acumula;
+    } 
+  }
+</script>
+</main>
+</body>
+</html>

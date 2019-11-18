@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercício 4 TP 3</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<main class="container text-center"> 
+<h1>Organizador</h1>
+<script>
+    var vetor = [20];
+    var auxiliar;
+    for(var i = 0; i < 20; i++){
+        vetor[i] = parseInt(prompt("Digite um número:"));
+    }
+    for(var i = 20; i >= 0; i--){
+        for(var j = 0; j < 20; j++){
+            if(vetor[j] >= vetor[j+1]){
+                auxiliar = vetor[j];
+                vetor[j] = vetor[j+1];
+                vetor[j+1] = auxiliar;
+            }
+        }
+    }
+    document.write("Lista em ordem crescente: " + "<br>");
+    for(var i = 0; i < 20; i++){
+        document.write(vetor[i] + "<br>");
+    }
+</script>
+</main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercício 1 TP 2</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<main class="container text-center">
+<h1>Calcular Salário dos trabalhadores</h1>
+<script>
+    for (var i = 0; i < 5; i++) {
+        var salario = +prompt("Digite um número:");
+            if (salario <= 500) {
+                salario = salario * 1.05;
+            } else if (salario >= 500 && salario <= 1200) {
+                salario = salario * 1.12;
+            } if (salario <= 600) {
+                salario = salario + 150;
+            } else if (salario > 600) {
+                salario = salario + 100;
+            }
+            document.write(salario.toFixed(2) + "<br>");
+    } 
+</script>
+</main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercício 1 TP 3</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<main class="container text-center">
+<h1>Vetor negativo e positivo</h1>
+    <script>
+        var vetor = [8];
+        var positivo = [];
+        var negativo = [];
+        for(var i = 0; i < 8; i++){
+            vetor[i] = parseInt(prompt("Digite um número:"));
+        }
+        for (var i = 0; i < 8; i++){
+            if(vetor[i] < 0){
+                negativo.push(vetor[i]);
+            } else{
+                positivo.push(vetor[i]);
+            }
+        }
+            for (var i = 0; i < positivo.length; i++){           
+                document.write("Vetor Positivo: " + positivo[i] + "<br>");
+            }
+            for (var i = 0; i < negativo.length; i++){
+                document.write("Vetor Negativo: " + negativo[i] + "<br>");
+            }
+    </script>
+</main>
+</body>
+</html>

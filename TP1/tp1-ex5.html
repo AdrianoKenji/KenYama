@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercício 5 TP 1</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<main class="container text-center">
+<h1>Menu de Opções</h1>
+<p>
+    Selecione a opçao: <br>
+    <select name="opção" id="opcao" onchange="selecionarOpcao()">
+        <option value="0">Selecione</option>
+        <option value="1">Opção 1</option>
+        <option value="2">Opção 2</option>
+    </select>
+</p>
+<script>
+    function selecionarOpcao() {
+        var opcao = document.all['opcao'].value;
+        switch (opcao) {
+            case '1':
+                var a = +prompt("Digite um número: ");
+                var b = +prompt("Digite um outro número: ");
+                var c = a + b;
+                alert("A soma dos dois números é: " + c + ".")
+                break;
+                case '2': 
+                var d = prompt("Digite um número: ");
+                var e = Math.sqrt(d).toFixed(2);
+                alert("A raiz desse número é: " + e + ".")
+                break;
+        }
+    }
+</script>
+</main>
+</body>
+</html>

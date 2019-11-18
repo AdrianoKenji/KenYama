@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercício 2 TP 3</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<main class="container text-center"> 
+<h1>Maior que 50?</h1>
+<script>
+    var vetor = [8];
+    var contador = 0;
+    for(var i = 0; i < 8; i++){
+        vetor[i] = parseInt(prompt("Digite um numero:"));
+    }
+    for(var i = 0; i < 8; i++){
+        if(vetor[i] > 50){
+            document.write("Número acima de 50: " + vetor[i] + "<br>");
+            document.write("Posição: " + (i+1) + "<br>");
+        }
+        else {
+            contador++;
+        }
+    }
+    if (contador == 8){
+        document.write("Não existem números maiores que 50");
+    }
+</script>
+</main>
+</body>
+</html>

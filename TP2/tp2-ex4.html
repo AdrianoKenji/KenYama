@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Exercício 4 TP 2</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<main class="container text-center">
+<h1>Verificar estoque de Vinho</h1>
+<p>
+    Digite a quantidade de Vinho Tinto: <br>
+    <input type="text" id="vt" placeholder="A soma tem que dar 50">
+</p>
+<p>
+    Digite a quantidade de Vinho Branco: <br>
+    <input type="text" id="vb" placeholder="A soma tem que dar 50">
+</p>
+<p>
+    Digite a quantidade de Vinho Rosê: <br>
+    <input type="text" id="vr" placeholder="A soma tem que dar 50">
+</p>
+<p>
+    <input type="button" value="Verificar" onclick="verificarEstoque()">
+</p>
+<script>
+    function verificarEstoque() {
+        var vt = Number(document.all['vt'].value);
+        var vb = Number(document.all['vb'].value);
+        var vr = Number(document.all['vr'].value);
+        var soma = vt + vb + vr;
+        if (soma < 50) {
+            alert("Está faltando números.")
+        } else {
+            document.write("A porcentagem do Vinho Tinto é: " + vt/0.5 + "%"
+             + " ,a porcentagem de Vinho Branco é: " + vb/0.5 + "%" 
+             + " e a porcentagem de Vinho Rosê é: " + vr/0.5 + "%");
+        }
+    }
+</script>
+</main>
+</body>
+</html>
